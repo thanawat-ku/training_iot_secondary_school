@@ -32,7 +32,7 @@ void setup() {
 void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
-    digitalWrite(internetPin, LOW);
+    //digitalWrite(internetPin, LOW);
     Serial.print("Attempting MQTT connection...");
     String id="KUSELed-1111";
     char buf[50];
@@ -64,7 +64,7 @@ void loop(){
     }
     char buf1[50],buf2[20];
     topic.toCharArray(buf1,topic.length() + 1);
-    response.toCharArray(buf2,response.length() + 1);
+    command.toCharArray(buf2,response.length() + 1);
     client.publish(buf1,buf2);
   }
 }
