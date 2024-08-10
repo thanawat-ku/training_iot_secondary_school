@@ -46,7 +46,7 @@ void callback(char* topic, byte* message, unsigned int length) {
 void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
-    digitalWrite(internetPin, LOW);
+    //digitalWrite(internetPin, LOW);
     Serial.print("Attempting MQTT connection...");
     String id="KUSELed"+device_id;
     String topic="KUSELed/"+device_id;
