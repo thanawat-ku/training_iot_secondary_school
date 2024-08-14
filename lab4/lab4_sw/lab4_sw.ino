@@ -1,7 +1,6 @@
 #include "WiFi.h"
 #include <PubSubClient.h>
 
-
 const char* mqtt_server = "mqtt-dashboard.com";
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -11,11 +10,9 @@ String device_id = "1234";
 int swPin = 26;
 int old_value=HIGH;
 
-
 void setup() {
   Serial.begin(115200);
   pinMode(swPin, INPUT_PULLUP);
-
 
   // Connect to Wi-Fi
   WiFi.mode(WIFI_STA);
@@ -28,13 +25,11 @@ void setup() {
   client.setServer(mqtt_server, 1883);
 }
 
-
 void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
-    //digitalWrite(internetPin, LOW);
     Serial.print("Attempting MQTT connection...");
-    String id="KUSELed-1111";
+    String id="KUSELed-"+device_id;
     char buf[50];
     id.toCharArray(buf,id.length() + 1);
     if (client.connect(buf)) {
@@ -64,7 +59,8 @@ void loop(){
     }
     char buf1[50],buf2[20];
     topic.toCharArray(buf1,topic.length() + 1);
-    command.toCharArray(buf2,response.length() + 1);
+    command.toCharArray(buf2,command.length() + 1);
     client.publish(buf1,buf2);
+    old_value=new_value;
   }
 }
