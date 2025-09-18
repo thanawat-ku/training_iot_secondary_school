@@ -1,6 +1,5 @@
 int ledPin = 5;
-int swPin = 26;
-
+int swPin = 17;
 void setup(){
     pinMode(ledPin, OUTPUT);
     pinMode(swPin, INPUT_PULLUP);
@@ -8,9 +7,10 @@ void setup(){
 
 void loop(){
     if(digitalRead(swPin) == LOW){
-        digitalWrite(ledPin, HIGH);
-    }else{
-        digitalWrite(ledPin, LOW);
+      digitalWrite(ledPin,HIGH);
     }
-    delay(200);
+    else{
+      digitalWrite(ledPin, LOW);
+    }
+    delay(50);
 }
