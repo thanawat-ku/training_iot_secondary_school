@@ -12,3 +12,6 @@ https://dl.espressif.com/dl/package_esp32_index.json
 - [Lab 3](/lab3) เขียนโปรแกรมอ่านค่าอนาล็อกอินพุท
 - [Lab 4](/lab4) เขียนโปรแกรมอ่านค่าอุณหภูมิและความชื้นด้วย DHT
 - [Lab 5](/lab5) เขียนโปรแกรมรับส่งข้อมูลด้วย MQTT
+
+Wokwi esp32 simulator
+https://wokwi.com/
