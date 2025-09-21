@@ -1,5 +1,8 @@
-ESP 32
+ESP 32 รุ่น 30 ขา
 https://th.cytron.io/p-nodemcu-esp32?r=1&language=en-gb&gad_source=1&gclid=CjwKCAjw_Na1BhAlEiwAM-dm7JWMQYh6OBF2YWl2mJ0pjhnE2THCxVxfsSkvoiKM4a1y-9MtE2SvyRoCxH8QAvD_BwE
+
+ESP 32 รุ่น 38 ขา
+https://www.allnewstep.com/product/5573/%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%94-esp32-nodemcu-goouuu-esp32-devkit-wi-fi-and-bluetooth-%E0%B9%81%E0%B8%9A%E0%B8%9A-38-%E0%B8%82%E0%B8%B2-%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%81%E0%B8%9A%E0%B8%9A-usb-type-c
 
 Board Manager URL
 https://dl.espressif.com/dl/package_esp32_index.json
