@@ -16,6 +16,7 @@ int MQTT_PORT = 1883;
 WiFiClient net;
 MQTTClient client;
 unsigned long lastMillis = 0;
+DHT dht(DHTPIN, DHTTYPE);
 
 void connect() {
   Serial.print("checking wifi...");
@@ -56,4 +57,5 @@ void loop() {
     float t = dht.readTemperature();
     client.publish(mqtt_topic, "Temp = " + String(t));
   }
+
 }
