@@ -1,16 +1,14 @@
-int ledPin = 5;
-int swPin = 17;
+int ledPin = 7;
 void setup(){
     pinMode(ledPin, OUTPUT);
-    pinMode(swPin, INPUT_PULLUP);
+    Serial.begin(115200);
 }
 
 void loop(){
-    if(digitalRead(swPin) == LOW){
-      digitalWrite(ledPin,HIGH);
-    }
-    else{
-      digitalWrite(ledPin, LOW);
-    }
-    delay(50);
+    digitalWrite(ledPin, HIGH);
+          Serial.println("LED On");
+    delay(1000);    
+    digitalWrite(ledPin, LOW); 
+          Serial.println("LED Off");
+    delay(1000);    
 }

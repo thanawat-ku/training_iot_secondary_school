@@ -1,12 +1,16 @@
-int analogPin = 32;
-int val = 0;
-void setup() {
-  Serial.begin(9600);
+int ledPin = 7;
+int swPin = 8;
+void setup(){
+    pinMode(ledPin, OUTPUT);
+    pinMode(swPin, INPUT_PULLUP);
 }
 
-void loop() {
-  val = analogRead(analogPin);
-  Serial.print("val = "); 
-  Serial.println(val); 
-  delay(500);
+void loop(){
+    if(digitalRead(swPin) == LOW){
+      digitalWrite(ledPin,HIGH);
+    }
+    else{
+      digitalWrite(ledPin, LOW);
+    }
+    delay(50);
 }
