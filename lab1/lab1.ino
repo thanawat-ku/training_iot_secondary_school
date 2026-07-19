@@ -2,6 +2,7 @@ int i = 1;
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
+  delay(3000);
   Serial.println("Hello, Raspberry Pi Pico!");
 }
 
